@@ -10,8 +10,8 @@ try:
         sys.stdout.write("\r")
         sys.stdout.write("\033[K")
         sys.stdout.write("CO: %g ppm" % (perc["CO"]))
-                if perc["co"] <=4.4:
-            ans=((50-0)/(4.4-0))*(perc["co"]-0)+0
+        if perc["co"] <=4.4:
+        ans=((50-0)/(4.4-0))*(perc["co"]-0)+0
 
         elif 4.4>perc["co"] and 9.5>perc["co"]:
             ans=((100-51)/(9.4-4.5))*(perc["co"]-4.5)+51
