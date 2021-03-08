@@ -33,5 +33,4 @@ try:
         sys.stdout.flush()
         time.sleep(0.1)
 
-except:
-    print("\nAbort by user")
+
