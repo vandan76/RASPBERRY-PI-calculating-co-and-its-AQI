@@ -9,7 +9,8 @@ try:
         perc = mq.MQPercentage()
         sys.stdout.write("\r")
         sys.stdout.write("\033[K")
-        if perc["co"] <=4.4:
+        sys.stdout.write("CO: %g ppm" % (perc["CO"]))
+                if perc["co"] <=4.4:
             ans=((50-0)/(4.4-0))*(perc["co"]-0)+0
 
         elif 4.4>perc["co"] and 9.5>perc["co"]:
@@ -29,8 +30,6 @@ try:
 
         elif 40.4>perc["co"] and 50.5>perc["co"]:
             ans=((500-401)*(50.5-40.5))(perc["co"]-40.5)+401
-
-        sys.stdout.write("CO: %g ppm" % (perc["CO"]))
         sys.stdout.write("AQI:",ans)
         sys.stdout.flush()
         time.sleep(0.1)
