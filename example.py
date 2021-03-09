@@ -11,7 +11,9 @@ try:
         sys.stdout.write("\033[K")
         sys.stdout.write("CO: %g ppm" % (perc["CO"]))
         if perc["CO"] <=4.4:
+            sys.stdout.write("vandan")
             ans=((50-0)/(4.4-0))*(perc["CO"]-0)+0
+            sys.stdout.write("joshi")
             sys.stdout.write("AQI:",ans)
         elif 4.4>perc["CO"] and 9.5>perc["CO"]:
             ans=((100-51)/(9.4-4.5))*(perc["CO"]-4.5)+51
