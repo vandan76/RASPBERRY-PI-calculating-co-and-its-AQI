@@ -32,5 +32,6 @@ try:
         sys.stdout.write("AQI:",ans)
         sys.stdout.flush()
         time.sleep(0.1)
-
+except:
+    print("\nAbort by user")
 
