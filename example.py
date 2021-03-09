@@ -31,6 +31,8 @@ try:
         elif 40.4>perc["CO"] and 50.5>perc["CO"]:
             ans=((500-401)*(50.5-40.5))(perc["CO"]-40.5)+401
             sys.stdout.write("AQI: %g" % ans)
+        else :
+             sys.stdout.write("AQI: reading is too much high")
         sys.stdout.flush()
         time.sleep(0.1)
 except:
