@@ -1,18 +1,25 @@
-from mq import *
-import sys, time
 
-try:
-    print("Press CTRL+C to abort.")
-    
-    mq = MQ();
-    while True:
-        perc = mq.MQPercentage()
-        sys.stdout.write("\r")
-        sys.stdout.write("\033[K")
-        sys.stdout.write("LPG: %g ppm, CO: %g ppm, Smoke: %g ppm" % (perc["GAS_LPG"], perc["CO"], perc["SMOKE"]))
-        sys.stdout.flush()
-        time.sleep(0.1)
+import example
+import Adafruit_charLCD as LCD
+import RPi.GPIO as GPIO
+import time
 
-except:
-    print("\nAbort by user")
-© 2021 GitHub, Inc.
+GPIO.setmode(GPIO.BCM)
+lcd1 = 12
+lcd2 = 7
+lcd3 = 21
+lcd4 = 25
+lcd5 = 24
+lcd6 = 23
+
+lcd = LCD.Adafruit_charLCD(lcd1 ,lcd2 ,lcd3 ,lcd4 ,lcd5 ,lcd6, 0, 16, 2)
+
+while True :
+    x=test.ans
+    y=test.perc["CO"]
+    lcd.clear()
+    lcd.message("co value: " + str(y) + "\nAQI OF CO iS: " + str(x))
+    time.sleep(1)
+
+
+
