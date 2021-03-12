@@ -44,8 +44,7 @@ try:
             ans=((500-401)*(50.5-40.5))(perc["CO"]-40.5)+401
             sys.stdout.write("AQI: %g" % ans)
         sys.stdout.flush()
-        
-        while True :
+  
        x=ans
        y=perc["CO"]
        lcd.clear()
