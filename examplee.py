@@ -15,8 +15,8 @@ lcd6 = 23
 lcd = LCD.Adafruit_CharLCD(lcd1, lcd2, lcd3, lcd4, lcd5, lcd6, 0, 16, 2)
 
 while True :
-    x=test.ans
-    y=test.perc["CO"]
+    x=example.ans
+    y=example.perc["CO"]
     lcd.clear()
     lcd.message("co value: " + str(y) + "\nAQI OF CO iS: " + str(x))
     time.sleep(1)
