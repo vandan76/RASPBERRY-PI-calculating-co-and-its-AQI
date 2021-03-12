@@ -1,6 +1,6 @@
 
 import example
-import Adafruit_charLCD as LCD
+import Adafruit_CharLCD as LCD
 import RPi.GPIO as GPIO
 import time
 
