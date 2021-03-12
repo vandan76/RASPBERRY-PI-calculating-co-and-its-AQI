@@ -45,10 +45,10 @@ try:
             sys.stdout.write("AQI: %g" % ans)
         sys.stdout.flush()
   
-       x=ans
-       y=perc["CO"]
-       lcd.clear()
-       lcd.message("co value: " + str(y) + "\nAQI OF CO iS: " + str(x))
-       time.sleep(1)
+        x=ans
+        y=perc["CO"]
+        lcd.clear()
+        lcd.message("co value: " + str(y) + "\nAQI OF CO iS: " + str(x))
+        time.sleep(1)
 except:
     print("\nAbort by user")
